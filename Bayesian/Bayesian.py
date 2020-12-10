@@ -54,7 +54,7 @@ def MCMC(iterations,delE, dEa):
 #             delE_PDF_old[i]=scipy.stats.norm(loc=delE_old[i], scale=0.1).pdf(delE_old[i])
             if i in [0,2,4,8,11,14]: # adsorption steps - 
                 delE_old[i]=delE[i] #change to record
-                mu, sigma = delE_old[i], 0.1
+                mu, sigma = delE_old[i], 0.1 # mu = mean, sigma = standard deviation
                 a, b = (-2 - mu) / sigma, (0 - mu) / sigma
                 delE_PDF_old[i]=scipy.stats.truncnorm(a,b,loc=delE_old[i],scale=sigma).pdf(delE_old[i])
                 delE_new[i]=scipy.stats.truncnorm.rvs(a,b,loc=delE_old[i],scale=sigma)
@@ -64,7 +64,7 @@ def MCMC(iterations,delE, dEa):
             
             elif i in [1,6,7,13]: # desorption steps 
                 delE_old[i]=delE[i] #change to record
-                mu, sigma = delE_old[i], 0.1
+                mu, sigma = delE_old[i], 0.1 # mu = mean, sigma = standard deviation
                 a, b = (0 - mu) / sigma, (2 - mu) / sigma
                 delE_PDF_old[i]=scipy.stats.truncnorm(a,b,loc=delE_old[i],scale=sigma).pdf(delE_old[i])
                 delE_new[i]=scipy.stats.truncnorm.rvs(a,b,loc=delE_old[i],scale=sigma)
@@ -76,7 +76,7 @@ def MCMC(iterations,delE, dEa):
             else: # surface reactions
 #                 print(delE[i])
                 delE_old[i]=delE[i] #change to record
-                mu, sigma = delE_old[i], 0.1
+                mu, sigma = delE_old[i], 0.1 # mu = mean, sigma = standard deviation
                 a, b = (-2 - mu) / sigma, (2 - mu) / sigma
                 delE_PDF_old[i]=scipy.stats.truncnorm(a,b,loc=delE_old[i],scale=sigma).pdf(delE_old[i])
                 delE_new[i]=scipy.stats.truncnorm.rvs(a,b,loc=delE_old[i],scale=sigma)
@@ -89,10 +89,10 @@ def MCMC(iterations,delE, dEa):
 #         print(delE_old)
 
 
-        for i in [1,4,6,9,12,13,15,18]: # later take the SD too for all elements and Eas to be positive only
+        for i in [1,4,6,9,12,13,15,18]:
             dEa_old[i]=dEa[i]
             dEa_PDF_old[i]=scipy.stats.truncnorm(a,b,loc=dEa_old[i],scale=sigma).pdf(dEa_old[i])
-            mu, sigma = dEa_old[i], 0.1
+            mu, sigma = dEa_old[i], 0.1 # mu = mean, sigma = standard deviation
             a, b = (0 - mu) / sigma, (1 - mu) / sigma
             dEa_new[i]=scipy.stats.truncnorm.rvs(a,b,loc=dEa_old[i],scale=sigma)
             assert np.all(dEa_new[i] >= 0)
@@ -184,6 +184,7 @@ exp_act_barrier = 0.67 # in eV
 
 # In[5]:
 
+## Input/change delE and dEa as DFT energetics to be corrected by the user in the following arrays:
 
 delE=[-1.662,  0.348, -0.167, -1.067, -0.449, -0.64 ,  0.432,  0.726,
         -1.483,  0.438, -1.657, -0.761, -1.667,  0.516, -1.738, -0.3]
