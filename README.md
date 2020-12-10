@@ -1,7 +1,7 @@
 # Microkinetic Model
-> This python code simulates the Pd site dynamics on CeO2 (100) under lean CO oxidation, TOF for CO oxidation, Reaction orders in CO and O2 as well as the rate limiting step and the coverage of the intermediate species under reaction comditions.
+> This python code simulates the Pd site dynamics on CeO<sub>2</sub>(100) under lean CO oxidation, TOF for CO oxidation, Reaction orders in CO and O<sub>2</sub> as well as the rate limiting step and the coverage of the intermediate species under reaction conditions of the following extensive reaction network.
 
-## Microkinetic Model for CO Oxidation on Pd sites - (Pd), (PdO) and (PdO2) + O2 ads
+## Reaction network for CO Oxidation on Pd sites - (Pd), (PdO) and (PdO<sub>2</sub>) + O<sub>2</sub> adsorption
 
 ## Reactions - 1 - 8
 # ![plot](./Figures/image1.png)
