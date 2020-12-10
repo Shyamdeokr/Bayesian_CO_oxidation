@@ -242,7 +242,7 @@ print("Please input in the form of arrays")
 
 # In[11]:
 
-
+##Users should input the number of MCMC iterations desired for running bayesian inference in the following line.
 iterations=10 # Number of MCMC iterations
 sample=MCMC(iterations,delE,dEa)
 
@@ -255,7 +255,6 @@ sample=MCMC(iterations,delE,dEa)
 # posterior=[rxnOrderCO_record, rxnOrderO2_record, act_barrier_record]
 prior=[np.round(sample[0][0],3),np.round(sample[0][1],3)]
 posterior=[np.round(sample[1][0],3),np.round(sample[1][1],3),np.round(sample[1][2],3)]
-
 prior[0][-1], prior[1][-1]
 # posterior[0]
 
