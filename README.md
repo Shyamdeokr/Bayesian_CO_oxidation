@@ -15,3 +15,12 @@
 
 ## Reactions 15-16 for O2 adsorption on Pd
 # ![plot](./Figures/image4.png)
+
+
+#Usage -
+
+python Bayesian.py
+
+delE and dEa which are corrections to input DFT reaction energies and DFT barriers respectively, can be changed in Bayesian.py. code can be modified to input energetics from user.
+
+It outputs Bayesian correted energetics (MCMC iterations and distribution plots) that match experimental data in an output folder.
