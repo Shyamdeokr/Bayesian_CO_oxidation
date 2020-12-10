@@ -302,7 +302,7 @@ for i in range(len(delE)):
     plt.title(Rxn_E[i])
     plt.plot(np.array(prior[0][:,i]), 'g.')
     plt.tight_layout(pad=0.5,h_pad=None)
-    plt.show
+#    plt.show
     plt.savefig("./output/DFT_reaction_energies_MCMC_posteriors.png")
 
 
@@ -315,7 +315,7 @@ for i in range(len(delE)):
     plt.title(Rxn_E[i])
     plt.hist(np.array(prior[0][:,i]),density=True)
     plt.tight_layout(pad=0.5,h_pad=None)
-    plt.show
+#    plt.show
     plt.savefig("./output/DFT_reaction_energies_MCMC_posteriors_distribution.png")
 
 
@@ -331,7 +331,7 @@ for i,j in enumerate([1,4,6,9,12,13,15,18]):
     plt.subplot(4,2,i+1)
     plt.title(Eact[i])
     plt.plot(np.array(prior[1][:,j]), 'm.')
-    plt.show
+#    plt.show
     plt.savefig("./output/DFT_activation_barrier_MCMC_posteriors.png")
 
 
@@ -343,7 +343,7 @@ for i,j in enumerate([1,4,6,9,12,13,15,18]):
     plt.subplot(4,2,i+1)
     plt.title(Eact[i])
     plt.hist(np.array(prior[1][:,j]),density=True)
-    plt.show
+#    plt.show
     plt.savefig("./output/DFT_activation_barriers_MCMC_posteriors_distribution.png")
 
 
