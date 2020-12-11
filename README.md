@@ -17,8 +17,8 @@
 # ![plot](./Figures/image4.png)
 
 
-#Usage -
-
+## Usage -
+### Run as following:
 python Bayesian.py
 
 delE and dEa which are corrections to input DFT reaction energies and DFT barriers respectively, can be changed in Bayesian.py. code can be modified to input energetics from user.
