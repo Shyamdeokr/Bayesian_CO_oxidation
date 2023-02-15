@@ -26,6 +26,6 @@
 ### Run as following:
 python Bayesian.py
 
-delE and dEa which are corrections to input DFT reaction energies and DFT barriers respectively, can be changed in Bayesian.py. code can be modified to input energetics from user.
+delE and dEa which are corrections to input DFT reaction energies and DFT barriers respectively, can be changed in Bayesian.py. The code can be modified to input DFT energetics from the user.
 
 It outputs Bayesian correted energetics (MCMC iterations and distribution plots) that match experimental data in an output folder.
