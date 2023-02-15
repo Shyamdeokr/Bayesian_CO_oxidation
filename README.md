@@ -1,5 +1,10 @@
-# Microkinetic Model
+# Microkinetic Model (MKM)
 > This python code simulates the Pd site dynamics on CeO<sub>2</sub>(100) under lean CO oxidation, TOF for CO oxidation, Reaction orders in CO and O<sub>2</sub> as well as the rate limiting step and the coverage of the intermediate species under reaction conditions of the following extensive reaction network.
+
+> Used in the following paper - https://pubs.acs.org/doi/abs/10.1021/acscatal.2c03194 
+> (Emergent Behavior in Oxidation Catalysis over Single-Atom Pd on a Reducible CeO2 Support via Mixed Redox Cycles) to generate corrections in DFT calculated energetics and activation barriers
+
+> Further details on the MKM and the Bayesian Inference can be found in the Supplementary Information of the paper.
 
 ## Reaction network for CO Oxidation on Pd sites - (Pd), (PdO) and (PdO<sub>2</sub>) + O<sub>2</sub> adsorption
 
